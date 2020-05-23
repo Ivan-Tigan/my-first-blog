@@ -1,5 +1,6 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, get_object_or_404
+from .models import CV
 # Create your views here.
 def cv(request):
-    return render(request, 'cv/cv.html', {})
+    c = get_object_or_404(CV)
+    return render(request, 'cv/cv.html', {'cv': c})
