@@ -1,14 +1,39 @@
 <html>
     <head>
         <title>CV</title>
+        <style>
+            body {
+                text-align: center;
+            }
+            .canvas {
+                text-align: left;
+                display: inline-block;
+                align-self: center;
+                background-color: ivory;
+                max-width: 40%;
+                padding-top: 4%;
+                padding-left: 4%;
+                padding-right: 4%;
+                border-style: dashed;
+                border-width: 2px;
+            }
+            .details {
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
-        <h2>{{ cv.name }}</h2>
-        <p>{{ cv.details | safe }}</p>
-        <hr>
-        <h2>Profile</h2><p>{{ cv.profile | safe }}</p>
-        <h2>Education</h2><p>{{ cv.education | safe }}</p>
-        <h2>Technical Skills</h2><p>{{ cv.technical_skills | safe }}</p>
-        <h2>Experience</h2><p>{{ cv.experience | safe }}</p>
-    </body>
+        <div class="canvas">
+            <div class="details">
+                <h2>{{ cv.name }}</h2>
+                <p>{{ cv.details | safe }}</p>    
+            </div>
+            <hr>
+            <h2>Profile</h2><p>{{ cv.profile | safe }}</p>
+            <h2>Education</h2><p>{{ cv.education | safe }}</p>
+            <h2>Technical Skills</h2><p>{{ cv.technical_skills | safe }}</p>
+            <h2>Experience</h2><p>{{ cv.experience | safe }}</p>
+    
+        </div>
+        </body>
 </html>
