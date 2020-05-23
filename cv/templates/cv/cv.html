@@ -3,7 +3,12 @@
         <title>CV</title>
     </head>
     <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
+        <h2>{{ cv.name }}</h2>
+        <p>{{ cv.details | safe }}</p>
+        <hr>
+        <h2>Profile</h2><p>{{ cv.profile | safe }}</p>
+        <h2>Education</h2><p>{{ cv.education | safe }}</p>
+        <h2>Technical Skills</h2><p>{{ cv.technical_skills | safe }}</p>
+        <h2>Experience</h2><p>{{ cv.experience | safe }}</p>
     </body>
 </html>
