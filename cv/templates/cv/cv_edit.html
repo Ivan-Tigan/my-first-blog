@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>CV</title>
+        <style>
+            body {
+                text-align: center;
+            }
+            .canvas {
+                text-align: left;
+                display: inline-block;
+                align-self: center;
+                background-color: ivory;
+                max-width: 40%;
+                padding-top: 4%;
+                padding-left: 4%;
+                padding-right: 4%;
+                border-style: dashed;
+                border-width: 2px;
+            }
+            .details {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Edit CV:</h2>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+        </body>
+</html>
