@@ -1,6 +1,9 @@
 <html>
     <head>
-        <title>CV</title>
+        <title>Edit CV</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        
         <style>
             body {
                 text-align: center;
@@ -24,9 +27,11 @@
     </head>
     <body>
         <h2>Edit CV:</h2>
-        <form method="POST" class="post-form">{% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="save btn btn-default">Save</button>
-        </form>
+        <div class="canvas">
+            <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="save btn btn-default">Save</button>
+            </form>
+        </div>
         </body>
 </html>
