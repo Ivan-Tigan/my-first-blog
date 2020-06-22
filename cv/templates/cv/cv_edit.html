@@ -27,11 +27,20 @@
     </head>
     <body>
         <h2>Edit CV:</h2>
+        
         <div class="canvas">
+            {% if user.is_authenticated %}
             <form method="POST" class="post-form">{% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit" class="save btn btn-default">Save</button>
             </form>
+            {% else %}
+                <h2> You are not authenticated so you cannot make and save changes to this CV.</h2>
+                <form method="POST" class="post-form">{% csrf_token %}
+                    {{ form.as_p }}
+                </form>
+            {% endif %}
         </div>
+       
         </body>
 </html>
