@@ -85,8 +85,8 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.delete_all_cookies()
         self.browser.get('http://127.0.0.1:8000/admin')
 
-        username = "vankata"
-        password = "Ivano6ka"
+        username = "****"
+        password = "****"
         
         # authenticate  
         field_username = self.browser.find_element_by_xpath('//input[@name="username"]')
